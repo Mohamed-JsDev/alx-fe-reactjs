@@ -9,7 +9,7 @@ const MainContent = () => {
         textAlign: "center",
       }}
     >
-      MainContent
+      I love to visit New York, Paris, and Tokyo.
     </MainContent>
   );
 };
