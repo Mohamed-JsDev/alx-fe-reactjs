@@ -2,7 +2,7 @@ import React from "react";
 
 const MainContent = () => {
   return (
-    <div
+    <MainContent
       style={{
         backgroundColor: "#333",
         color: "white",
@@ -10,7 +10,7 @@ const MainContent = () => {
       }}
     >
       MainContent
-    </div>
+    </MainContent>
   );
 };
 
