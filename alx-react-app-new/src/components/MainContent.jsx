@@ -2,7 +2,7 @@ import React from "react";
 
 const MainContent = () => {
   return (
-    <MainContent
+    <main
       style={{
         backgroundColor: "#333",
         color: "white",
@@ -10,7 +10,7 @@ const MainContent = () => {
       }}
     >
       I love to visit New York, Paris, and Tokyo.
-    </MainContent>
+    </main>
   );
 };
 
