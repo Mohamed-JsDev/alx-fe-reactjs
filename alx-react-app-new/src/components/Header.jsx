@@ -1,6 +1,6 @@
 import React from "react";
 
-const header = () => {
+const Header = () => {
   return (
     <header
       style={{ backgroundColor: "navy", color: "white", textAlign: "center" }}
@@ -10,4 +10,4 @@ const header = () => {
   );
 };
 
-export default header;
+export default Header;
