@@ -4,7 +4,7 @@ import MainContent from "./components/MainContent";
 import Header from "./components/Header";
 import UserProfile from "./components/UserProfile";
 import footer from "./components/Footer";
-import Counter from "./components/Counter";
+import Counter from "./components/Counter.jsx";
 
 function App() {
   return (
