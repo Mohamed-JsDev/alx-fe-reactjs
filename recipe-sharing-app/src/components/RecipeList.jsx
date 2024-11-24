@@ -1,6 +1,6 @@
-// RecipeList.jsx
 import { useRecipeStore } from "./recipeStore";
 import SearchBar from "./SearchBar";
+import { Link } from "react-router-dom"; // تأكد من استيراد Link
 
 const RecipeList = () => {
   const recipes = useRecipeStore((state) =>
@@ -12,10 +12,12 @@ const RecipeList = () => {
       <SearchBar />
       <ul>
         {recipes.map((recipe) => (
-          <li key={recipe.id}>
-            <h2>{recipe.title}</h2>
-            <p>{recipe.description}</p>
-          </li>
+          <Link to={`/recipe/${recipe.id}`} key={recipe.id}>
+            <li>
+              <h2>{recipe.title}</h2>
+              <p>{recipe.description}</p>
+            </li>
+          </Link>
         ))}
       </ul>
     </div>
