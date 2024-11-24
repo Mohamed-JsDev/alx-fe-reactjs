@@ -1,19 +1,25 @@
+// RecipeList.jsx
 import { useRecipeStore } from "./recipeStore";
+import SearchBar from "./SearchBar";
 
 const RecipeList = () => {
-  const recipes = useRecipeStore((state) => state.recipes);
+  const recipes = useRecipeStore((state) =>
+    state.filteredRecipes.length > 0 ? state.filteredRecipes : state.recipes
+  );
 
   return (
     <div>
-      {recipes.map((recipe) => (
-        <div key={recipe.id}>
-          <h3>{recipe.title}</h3>
-          <p>{recipe.description}</p>
-        </div>
-      ))}
+      <SearchBar />
+      <ul>
+        {recipes.map((recipe) => (
+          <li key={recipe.id}>
+            <h2>{recipe.title}</h2>
+            <p>{recipe.description}</p>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
 
 export default RecipeList;
-// AddRecipeForm component
