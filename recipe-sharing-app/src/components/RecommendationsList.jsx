@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+// src/components/RecommendationsList.jsx
+import React, { useEffect } from "react";
 import { useRecipeStore } from "./recipeStore";
 
 const RecommendationsList = () => {
@@ -10,7 +11,7 @@ const RecommendationsList = () => {
   );
 
   useEffect(() => {
-    generateRecommendations();
+    generateRecommendations(); // Generate recommendations on component mount
   }, [generateRecommendations]);
 
   return (
