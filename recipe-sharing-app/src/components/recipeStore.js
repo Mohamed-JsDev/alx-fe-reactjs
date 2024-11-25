@@ -1,19 +1,27 @@
+// recipeStore.js
 import create from "zustand";
 
 const useRecipeStore = create((set) => ({
   recipes: [],
-  addRecipe: (recipe) =>
-    set((state) => ({ recipes: [...state.recipes, recipe] })),
-  updateRecipe: (id, updatedRecipe) =>
+  searchTerm: "",
+  filteredRecipes: [],
+
+  setSearchTerm: (term) => {
+    set({ searchTerm: term });
+    // Trigger filtering whenever the search term is updated
     set((state) => ({
-      recipes: state.recipes.map((recipe) =>
-        recipe.id === id ? { ...recipe, ...updatedRecipe } : recipe
+      filteredRecipes: state.recipes.filter(
+        (recipe) =>
+          recipe.title.toLowerCase().includes(term.toLowerCase()) ||
+          recipe.ingredients.some((ingredient) =>
+            ingredient.toLowerCase().includes(term.toLowerCase())
+          )
       ),
-    })),
-  deleteRecipe: (id) =>
-    set((state) => ({
-      recipes: state.recipes.filter((recipe) => recipe.id !== id),
-    })),
+    }));
+  },
+
+  // Optionally, you can add a method to reset the filter
+  resetFilter: () => set({ searchTerm: "", filteredRecipes: [] }),
 }));
 
 export { useRecipeStore };
