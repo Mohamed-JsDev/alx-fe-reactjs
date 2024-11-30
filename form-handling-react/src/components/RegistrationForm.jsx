@@ -1,15 +1,19 @@
 import { useState } from "react";
 
 const RegistrationForm = () => {
-  const [user, setUser] = useState({ name: "", email: "", password: "" });
+  const [userName, setUserName] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setUser((prevState) => ({ ...prevState, [name]: value }));
+    setUserName((prevState) => ({ ...prevState, [name]: value }));
   };
   const handleSubmit = (e) => {
     e.prevent.default();
-    console.log(user);
+    console.log(userName);
   };
   return (
     <form
@@ -21,19 +25,24 @@ const RegistrationForm = () => {
       }}
     >
       <label>name</label>
-      <input type="text" id="name" value={user.name} onChange={handleChange} />
+      <input
+        type="text"
+        id="name"
+        value={userName.name}
+        onChange={handleChange}
+      />
       <label>email</label>
       <input
         type="email"
         id="email"
-        value={user.name}
+        value={userName.name}
         onChange={handleChange}
       />
       <label>password</label>
       <input
         type="password"
         id="password"
-        value={user.password}
+        value={userName.password}
         onChange={handleChange}
       />
       <button type="submit">submit</button>
