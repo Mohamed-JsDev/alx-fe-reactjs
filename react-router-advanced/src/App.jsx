@@ -3,7 +3,11 @@
 import Profile from "./components/profile";
 
 const App = () => {
-  return <Profile />;
+  return;
+  <>
+    <Profile />
+    <Route path="/blog/:id" element="BlogPost" />
+  </>;
 };
 
 export default App;
