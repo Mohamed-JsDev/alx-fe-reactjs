@@ -1,20 +1,34 @@
-// src/pages/Profile.jsx
-import { Routes, Route, Link } from "react-router-dom";
-import ProfileDetails from "./ProfileDetails";
-import ProfileSettings from "./ProfileSettings.jsx";
+// src/components/Profile.jsx
+import { Route, Link, Switch } from "react-router-dom";
+import ProfileSettings from "./ProfileSettings";
+import ProfileDetails from "src/components/ProfileDetails.jsx";
+import { useRouteMatch } from "react-router-dom";
 
 const Profile = () => {
+  let { path, url } = useRouteMatch();
   return (
     <div>
       <h2>Profile</h2>
-      <nav>
-        <Link to="details">Details</Link>
-        <Link to="settings">Settings</Link>
-      </nav>
-      <Routes>
-        <Route path="details" element={<ProfileDetails />} />
-        <Route path="settings" element={<ProfileSettings />} />
-      </Routes>
+      <ul>
+        <li>
+          <Link to={`${url}/ProfileDetails`}>Profile</Link>
+        </li>
+        <li>
+          <Link to={`${url}/ProfileSettings`}>Settings</Link>
+        </li>
+      </ul>
+
+      <Switch>
+        <Route exact path={path}>
+          <h3>Please select an option.</h3>
+        </Route>
+        <Route path={`${path}/ProfileDetails`}>
+          <ProfileDetails />
+        </Route>
+        <Route path={`${path}/ProfileSettings`}>
+          <ProfileSettings />
+        </Route>
+      </Switch>
     </div>
   );
 };
