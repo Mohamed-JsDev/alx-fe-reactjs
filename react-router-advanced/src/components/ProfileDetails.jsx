@@ -1,8 +1,7 @@
-import { useParams } from "react-router-dom";
-
-const ProfileDetails = () => {
-  const link = useParams();
-  return <div>${link}</div>;
-};
-
+// src/pages/ProfileDetails.jsx
+const ProfileDetails = () => <div>Profile Details Content</div>;
 export default ProfileDetails;
+
+// src/pages/ProfileSettings.jsx
+const ProfileSettings = () => <div>Profile Settings Content</div>;
+export default ProfileSettings;

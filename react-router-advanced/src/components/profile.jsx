@@ -1,16 +1,20 @@
-import { Link } from "react-router-dom";
+// src/pages/Profile.jsx
+import { Routes, Route, Link } from "react-router-dom";
+import ProfileSettings from "./ProfileSettings";
+import ProfileDetails from "./ProfileDetails";
 
 const Profile = () => {
   return (
     <div>
-      <ul>
-        <li>
-          <Link to={"profile/:agadg"}>profileDetails</Link>
-        </li>
-        <li>
-          <Link to={"profileSetting"}>profileSetting</Link>
-        </li>
-      </ul>
+      <h2>Profile</h2>
+      <nav>
+        <Link to="details">Details</Link>
+        <Link to="settings">Settings</Link>
+      </nav>
+      <Routes>
+        <Route path="details" element={<ProfileDetails />} />
+        <Route path="settings" element={<ProfileSettings />} />
+      </Routes>
     </div>
   );
 };
