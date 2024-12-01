@@ -1,12 +1,12 @@
 import { useState } from "react";
 
 const RegistrationForm = () => {
-  const [userName, setUserName] = useState();
+  const [username, setUsername] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const handleSubmit = (e) => {
     e.prevent.default();
-    console.log(userName, email, password);
+    console.log(username, email, password);
   };
   return (
     <form
@@ -21,8 +21,8 @@ const RegistrationForm = () => {
       <input
         type="text"
         id="name"
-        value={userName}
-        onChange={(e) => setUserName(e.target.value)}
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
       />
       <label>email</label>
       <input
