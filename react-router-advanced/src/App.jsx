@@ -1,8 +1,8 @@
 // src/App.jsx
 import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
 import Home from "./pages/Home";
-import Profile from "./components/Profile"; // Import Profile component
 import NotFound from "./pages/NotFound";
+import Profile from "./components/profile";
 
 const App = () => {
   return (
