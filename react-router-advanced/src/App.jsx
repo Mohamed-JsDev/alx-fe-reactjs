@@ -1,16 +1,8 @@
 import "./App.css";
-import { Route, Router, Routes, BrowserRouter } from "react-router-dom";
-
+// import { Route, Router, Routes, BrowserRouter } from "react-router-dom";
+import Profile from "./components/profile";
 function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element="profile"></Route>
-        <Route path="Profile/:profileDetails" element="ProfileDetails"></Route>
-        <Route path="/profileSetting" element="profileSetting"></Route>
-      </Routes>
-    </Router>
-  );
+  return <Profile />;
 }
 
 export default App;
