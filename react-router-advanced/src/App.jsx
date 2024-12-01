@@ -25,6 +25,7 @@ const App = () => {
           element={<ProtectedRoute element={<Profile />} />}
         />
         <Route path="*" element={<NotFound />} />
+        <Route to="/blog/:id" element="BlogPost" />
       </Routes>
     </div>
   );
