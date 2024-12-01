@@ -1,5 +1,5 @@
 // src/App.jsx
-import { Link, Route, Routes } from "react-router-dom";
+import { Link, Route, Routes, BrowserRouter } from "react-router-dom";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Profile from "./components/profile";
 
