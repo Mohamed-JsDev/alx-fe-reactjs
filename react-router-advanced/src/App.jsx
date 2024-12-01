@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route, Router, Routes } from "react-router-dom";
+import { Route, Router, Routes, BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
