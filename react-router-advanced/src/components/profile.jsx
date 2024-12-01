@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const profile = () => {
+const Profile = () => {
   return (
     <div>
       <ul>
@@ -15,4 +15,4 @@ const profile = () => {
   );
 };
 
-export default profile;
+export default Profile;
