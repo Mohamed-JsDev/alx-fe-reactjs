@@ -1,5 +1,5 @@
 // src/App.jsx
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import Profile from "./components/Profile";
 import NotFound from "./pages/NotFound";
