@@ -1,7 +1,8 @@
-import React from "react";
 import TodoList from "./TodoList";
-
+import { render, screen, fireEvent } from '@testing-library/react';
+import TodoList from '../TodoList'; // Adjust the path if necessary
 const App = () => {
+  use sr
   return (
     <div>
       <TodoList />
