@@ -5,7 +5,7 @@ const profile = () => {
     <div>
       <ul>
         <li>
-          <Link to={"profile/agadg"}>profileDetails</Link>
+          <Link to={"profile/:agadg"}>profileDetails</Link>
         </li>
         <li>
           <Link to={"profileSetting"}>profileSetting</Link>
