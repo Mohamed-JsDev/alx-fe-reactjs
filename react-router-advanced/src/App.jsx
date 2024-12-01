@@ -1,27 +1,23 @@
 // src/App.jsx
-import { Link, Route, Routes, BrowserRouter } from "react-router-dom";
-import ProtectedRoute from "./components/ProtectedRoute";
-import Profile from "./components/profile";
+import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
+import Home from "./pages/Home";
+import Profile from "./components/Profile"; // Import Profile component
+import NotFound from "./pages/NotFound";
 
 const App = () => {
-  const isAuthenticated = false; // Simulate authentication
-
   return (
     <div>
       <nav>
+        <Link to="/">Home</Link>
         <Link to="/profile">Profile</Link>
       </nav>
       <Routes>
-        <Route
-          path="/profile/*"
-          element={
-            <ProtectedRoute
-              element={<Profile />}
-              isAuthenticated={isAuthenticated}
-            />
-          }
-        />
+        <Route path="/" element={<Home />} />
+        <Route path="/profile/*" element={<Profile />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
 };
+
+export default App;
