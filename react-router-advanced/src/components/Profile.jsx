@@ -1,5 +1,5 @@
 // src/components/Profile.jsx
-import { Route, Link, Switch } from "react-router-dom";
+import { Route, Link, Switch,Routes } from "react-router-dom";
 import ProfileSettings from "./ProfileSettings";
 import ProfileDetails from "src/components/ProfileDetails.jsx";
 import { useRouteMatch } from "react-router-dom";
