@@ -5,3 +5,11 @@ module.exports = {
   variants: { extend: {} },
   plugins: [],
 };
+// /** @type {import('tailwindcss').Config} */
+// export default {
+//   content: [],
+//   theme: {
+//     extend: {},
+//   },
+//   plugins: [],
+// };
