@@ -12,17 +12,17 @@ const Search = () => {
     setLoading(true);
     setError("");
     setUserData(null);
-
     try {
       const data = await fetchUserData(username);
       setUserData(data);
     } catch (err) {
-      setError("Looks like we can't find the user.");
+      setError("Looks like we cant find the user");
       console.log(err);
     } finally {
       setLoading(false);
     }
   };
+  var login;
 
   return (
     <div>
