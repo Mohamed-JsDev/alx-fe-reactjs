@@ -6,6 +6,7 @@ function App() {
         <Route path="/"></Route>
       </Routes>
       <h1>Mohamed</h1>
+      <Sea
     </>
   );
 }
