@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import Search from "./components/search";
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
         <Route path="/"></Route>
       </Routes>
       <h1>Mohamed</h1>
+      <Search />
     </>
   );
 }
