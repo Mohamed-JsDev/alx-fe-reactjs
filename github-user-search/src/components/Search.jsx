@@ -1,4 +1,3 @@
-// src/components/Search.jsx
 import { useState } from "react";
 import { fetchUserData } from "../services/githubService";
 
@@ -22,8 +21,7 @@ const Search = () => {
       setUserData(data);
       setTotalCount(data.total_count);
     } catch (err) {
-      setError("Looks like we can't find any users.");
-      console.log(err);
+      setError("Looks like we can't find any users. "`${err}`);
     } finally {
       setLoading(false);
     }
