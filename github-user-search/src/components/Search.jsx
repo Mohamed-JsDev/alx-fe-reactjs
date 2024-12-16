@@ -21,7 +21,7 @@ const Search = () => {
       setUserData(data);
       setTotalCount(data.total_count);
     } catch (err) {
-      setError("Looks like we can't find any users. "`${err}`);
+      setError("Looks like we can't find any users. ");
     } finally {
       setLoading(false);
     }
