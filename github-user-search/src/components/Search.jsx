@@ -10,6 +10,7 @@ const Search = () => {
   const [error, setError] = useState("");
   const [page, setPage] = useState(1);
   const [totalCount, setTotalCount] = useState(0);
+  "Looks like we cant find the user"
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
